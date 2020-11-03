@@ -1,5 +1,17 @@
 <h1>Show Airplane</h1>
 
+<header class="plane-header">
+    <div class="container">
+      <nav>
+         <ul>
+             <li><a><%= link_to "Planes", airplanes_path %></a></li>
+             <li><a><%= link_to "Flights", flights_path %></a></li>
+             <li><a><%= link_to "Admin", login_path %></a></li>
+           </ul>
+         </nav>
+       </div>
+   </header>
+
 <div class="container">
   <div class="card">
     <h1><%= @airplane.name %></h1>
