@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-class Airplanes extends Component {
+class Login extends Component {
   render() {
     return(
-      <h1> Airplanes page coming soon</h1>
+      <h1> Login page coming soon</h1>
     )
   }
 }
