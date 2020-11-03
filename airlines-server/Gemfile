@@ -24,11 +24,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
  gem 'bcrypt', '~> 3.1.7'
-<<<<<<< HEAD
 
-
-=======
->>>>>>> c83f3daa306eb52c011fa6063634127313252daf
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
