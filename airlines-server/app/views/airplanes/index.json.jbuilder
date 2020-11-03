@@ -1,1 +1,1 @@
-json.array! @airplanes, partial: "airplanes/airplane", as: :user
+json.array! @airplanes, partial: "airplanes/airplane", as: :airplane
