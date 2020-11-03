@@ -1,1 +1,18 @@
 <h1>Show Airplane</h1>
+
+<div class="container">
+  <div class="card">
+    <h1><%= @airplane.name %></h1>
+    <h3><%= @airplane.rows %></h3>
+    <!-- Check if current user is an admin. -->
+    <!-- If true display edit / delete controls. If false hide-->
+    <% if @current_user.present? && @current_user.is_admin %>
+      <div class="controls">
+        <%= link_to "Edit Airplane", edit_airplane_path(@airplane) %>
+        <%= link_to "Delete Airplane", @airplane, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+      </div>
+    <% else %>
+      <%= button_to "Buy now $ #{ @product.price_cents / 100.0 }", checkout_create_path, :method => 'post', :class => 'btn-primary btn-card-2' %>
+    <% end %>
+  </div>
+</div>
