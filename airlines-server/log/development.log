@@ -408,6 +408,514 @@ Processing by AirplanesController#new as HTML
 Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.0ms)
 
 
+<<<<<<< HEAD
+Started GET "/airplanes/new" for ::1 at 2020-11-03 17:43:18 +1100
+Processing by AirplanesController#new as HTML
+  Rendering airplanes/new.html.erb within layouts/application
+  Rendered airplanes/_form.html.erb (1.5ms)
+  Rendered airplanes/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 36ms (Views: 10.7ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/airplanes/" for ::1 at 2020-11-03 17:43:29 +1100
+Processing by AirplanesController#index as HTML
+  Rendering airplanes/index.html.erb within layouts/application
+  Rendered airplanes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/airplanes/" for ::1 at 2020-11-03 17:44:51 +1100
+Processing by AirplanesController#index as HTML
+  Rendering airplanes/index.html.erb within layouts/application
+  [1m[36mAirplane Load (3.3ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/airplanes/index.html.erb:5
+  Rendered airplanes/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 19ms (Views: 14.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/airplanes/" for ::1 at 2020-11-03 17:44:52 +1100
+Processing by AirplanesController#index as HTML
+  Rendering airplanes/index.html.erb within layouts/application
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/airplanes/index.html.erb:5
+  Rendered airplanes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/airplanes/new" for ::1 at 2020-11-03 17:44:59 +1100
+Processing by AirplanesController#new as HTML
+  Rendering airplanes/new.html.erb within layouts/application
+  Rendered airplanes/_form.html.erb (1.5ms)
+  Rendered airplanes/new.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/airplanes" for ::1 at 2020-11-03 17:45:07 +1100
+Processing by AirplanesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BSarELJoWaWAF4Ltjs1nDMTKUc3lTaJcXFrQRtwu19StlkcbVZUuz1wemCYYM6fUDx1EwIJrLsNS9XvQspHZgg==", "airplane"=>{"name"=>"Ne wPLane", "rows"=>"12", "columns"=>"1"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/airplanes_controller.rb:11
+  [1m[36mAirplane Create (8.6ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Ne wPLane"], ["rows", "12"], ["columns", 1], ["created_at", "2020-11-03 06:45:07.887553"], ["updated_at", "2020-11-03 06:45:07.887553"]]
+  ↳ app/controllers/airplanes_controller.rb:11
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/airplanes_controller.rb:11
+Redirected to http://localhost:3000/airplanes/1
+Completed 302 Found in 20ms (ActiveRecord: 14.7ms)
+
+
+Started GET "/airplanes/1" for ::1 at 2020-11-03 17:45:07 +1100
+Processing by AirplanesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAirplane Load (1.5ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/airplanes_controller.rb:16
+  Rendering airplanes/show.html.erb within layouts/application
+  Rendered airplanes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 12.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/airplanes/1" for ::1 at 2020-11-03 17:45:24 +1100
+Processing by AirplanesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAirplane Load (0.5ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/airplanes_controller.rb:16
+  Rendering airplanes/show.html.erb within layouts/application
+  Rendered airplanes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/airplanes" for ::1 at 2020-11-03 17:45:28 +1100
+Processing by AirplanesController#index as HTML
+  Rendering airplanes/index.html.erb within layouts/application
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/airplanes/index.html.erb:5
+  Rendered airplanes/index.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Airplane:0x00007fb8517a0970>):
+    4:   <!-- Loop through all products in database and display in css grid (auto rows) -->
+    5:   <% @airplanes.each do |airplane| %>
+    6:     <div class="card">
+    7:       <h3><%= link_to airplane.title, airplane %></h3>
+    8:     </div>
+    9:   <% end %>
+   10: </div>
+  
+app/views/airplanes/index.html.erb:7:in `block in _app_views_airplanes_index_html_erb___3603352710507214080_20840'
+app/views/airplanes/index.html.erb:5:in `_app_views_airplanes_index_html_erb___3603352710507214080_20840'
+Started GET "/airplanes" for ::1 at 2020-11-03 17:45:43 +1100
+Processing by AirplanesController#index as HTML
+  Rendering airplanes/index.html.erb within layouts/application
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/airplanes/index.html.erb:5
+  Rendered airplanes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/airplanes/1" for ::1 at 2020-11-03 17:45:46 +1100
+Processing by AirplanesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/airplanes_controller.rb:16
+  Rendering airplanes/show.html.erb within layouts/application
+  Rendered airplanes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/airplanes/1" for ::1 at 2020-11-03 17:48:56 +1100
+Processing by AirplanesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAirplane Load (0.3ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/airplanes_controller.rb:16
+  Rendering airplanes/show.html.erb within layouts/application
+  Rendered airplanes/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "nick@ga.com"], ["is_admin", true], ["created_at", "2020-11-03 07:00:41.275007"], ["updated_at", "2020-11-03 07:00:41.275007"]]
+  ↳ db/seeds.rb:2
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "mike@ga.com"], ["is_admin", true], ["created_at", "2020-11-03 07:00:41.279667"], ["updated_at", "2020-11-03 07:00:41.279667"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "henry@ga.com"], ["is_admin", true], ["created_at", "2020-11-03 07:00:41.283109"], ["updated_at", "2020-11-03 07:00:41.283109"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:5
+  [1m[36mAirplane Load (0.8ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mAirplane Destroy (7.1ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAirplane Create (0.4ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "GA123"], ["rows", "A,B,C,D"], ["columns", 20], ["created_at", "2020-11-03 07:00:41.417369"], ["updated_at", "2020-11-03 07:00:41.417369"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAirplane Create (0.3ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "GA456"], ["rows", "A,B,C"], ["columns", 22], ["created_at", "2020-11-03 07:00:41.419612"], ["updated_at", "2020-11-03 07:00:41.419612"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Create (0.2ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "GA789"], ["rows", "A,B,C,D,E,F"], ["columns", 20], ["created_at", "2020-11-03 07:00:41.421758"], ["updated_at", "2020-11-03 07:00:41.421758"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "nick@ga.com"], ["is_admin", true], ["created_at", "2020-11-03 07:01:10.620335"], ["updated_at", "2020-11-03 07:01:10.620335"]]
+  ↳ db/seeds.rb:2
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "mike@ga.com"], ["is_admin", true], ["created_at", "2020-11-03 07:01:10.623296"], ["updated_at", "2020-11-03 07:01:10.623296"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "henry@ga.com"], ["is_admin", true], ["created_at", "2020-11-03 07:01:10.625925"], ["updated_at", "2020-11-03 07:01:10.625925"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:5
+  [1m[36mAirplane Load (1.4ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mAirplane Destroy (0.3ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:7
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mAirplane Destroy (2.1ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mAirplane Destroy (0.3ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAirplane Create (0.4ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "GA123"], ["rows", "A,B,C,D"], ["columns", 20], ["created_at", "2020-11-03 07:01:10.770281"], ["updated_at", "2020-11-03 07:01:10.770281"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAirplane Create (0.3ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "GA456"], ["rows", "A,B,C"], ["columns", 22], ["created_at", "2020-11-03 07:01:10.772511"], ["updated_at", "2020-11-03 07:01:10.772511"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Create (0.3ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "GA789"], ["rows", "A,B,C,D,E,F"], ["columns", 20], ["created_at", "2020-11-03 07:01:10.774576"], ["updated_at", "2020-11-03 07:01:10.774576"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "airplanes"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2965226885080345935)[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2965226885080345935)[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2965226885080345935)[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateAirplanes (20201103060941)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (9.4ms)[0m  [1m[35mDROP TABLE "airplanes"[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201103060941"]]
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2965226885080345935)[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2965226885080345935)[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateAirplanes (20201103070324)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (15.9ms)[0m  [1m[35mCREATE TABLE "airplanes" ("id" bigserial primary key, "name" character varying, "rows" integer, "column" integer, "flight_id" integer)[0m
+  ↳ db/migrate/20201103070324_create_airplanes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201103070324"]]
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (10.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(2965226885080345935)[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mAirplane Load (0.6ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2965226885080345935)[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2965226885080345935)[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:1
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "nick@ga.com"], ["is_admin", true], ["created_at", "2020-11-03 07:04:49.692976"], ["updated_at", "2020-11-03 07:04:49.692976"]]
+  ↳ db/seeds.rb:2
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "mike@ga.com"], ["is_admin", true], ["created_at", "2020-11-03 07:04:49.695527"], ["updated_at", "2020-11-03 07:04:49.695527"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "henry@ga.com"], ["is_admin", true], ["created_at", "2020-11-03 07:04:49.697521"], ["updated_at", "2020-11-03 07:04:49.697521"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:5
+  [1m[36mAirplane Load (0.7ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2965226885080345935)[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateAirplanes (20201103070324)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (2.4ms)[0m  [1m[35mDROP TABLE "airplanes"[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201103070324"]]
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2965226885080345935)[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2965226885080345935)[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateAirplanes (20201103070555)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "airplanes" ("id" bigserial primary key, "name" character varying, "rows" integer, "columns" integer, "flight_id" integer)[0m
+  ↳ db/migrate/20201103070555_create_airplanes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201103070555"]]
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2965226885080345935)[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:1
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "nick@ga.com"], ["is_admin", true], ["created_at", "2020-11-03 07:06:21.332683"], ["updated_at", "2020-11-03 07:06:21.332683"]]
+  ↳ db/seeds.rb:2
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "mike@ga.com"], ["is_admin", true], ["created_at", "2020-11-03 07:06:21.335425"], ["updated_at", "2020-11-03 07:06:21.335425"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "henry@ga.com"], ["is_admin", true], ["created_at", "2020-11-03 07:06:21.337538"], ["updated_at", "2020-11-03 07:06:21.337538"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:5
+  [1m[36mAirplane Load (0.8ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAirplane Create (0.6ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "GA123"], ["rows", 0], ["columns", 20]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAirplane Create (0.3ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "GA456"], ["rows", 0], ["columns", 22]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Create (0.3ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "GA789"], ["rows", 0], ["columns", 20]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "airplanes"[0m
+  ↳ db/seeds.rb:12
+=======
 Started GET "/" for ::1 at 2020-11-03 17:45:06 +1100
   [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/nicholasmather/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
@@ -716,6 +1224,7 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 34ms (Views: 30.8ms | ActiveRecord: 2.0ms)
 
 
+<<<<<<< HEAD
   [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE "airlines-server_development" ENCODING = 'unicode'[0m
   ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
   [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "airlines-server_test" ENCODING = 'unicode'[0m
@@ -915,3 +1424,218 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 42ms (Views: 30.0ms | ActiveRecord: 1.6ms)
 
 
+=======
+>>>>>>> 0b4ff632128d8619faa8f3e17268320c8b8952f9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:5
+  [1m[36mAirplane Load (0.7ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mAirplane Destroy (0.4ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mAirplane Destroy (0.3ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mAirplane Destroy (0.4ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAirplane Create (1.1ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "GA123"], ["rows", 4], ["columns", 20]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAirplane Create (0.3ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "GA456"], ["rows", 5], ["columns", 22]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Create (0.3ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "GA789"], ["rows", 6], ["columns", 20]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "airplanes"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:5
+  [1m[36mAirplane Load (0.6ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mAirplane Destroy (0.6ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:7
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mAirplane Destroy (0.3ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mAirplane Destroy (0.3ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAirplane Create (0.4ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "GA123"], ["rows", 4], ["columns", 20]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAirplane Create (0.2ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "GA456"], ["rows", 5], ["columns", 22]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Create (0.3ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "GA789"], ["rows", 6], ["columns", 20]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "airplanes"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "password_digest", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "nick@ga.com"], ["name", "Nick"], ["password_digest", "$2a$12$jjgewpWCOJaQxTq7qVuevevo95.eJERwrUhOXvCh/YJcUYa59P7.K"], ["is_admin", true], ["created_at", "2020-11-03 07:15:59.872933"], ["updated_at", "2020-11-03 07:15:59.872933"]]
+  ↳ db/seeds.rb:2
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "password_digest", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "mike@ga.com"], ["name", "Mike"], ["password_digest", "$2a$12$GP7Lw.7HvSE7dS.F8qALE.fWk2sKys9IaeGnsL4AM9IVYxNyhKuI."], ["is_admin", true], ["created_at", "2020-11-03 07:16:00.155494"], ["updated_at", "2020-11-03 07:16:00.155494"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "password_digest", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "henry@ga.com"], ["name", "Henry"], ["password_digest", "$2a$12$l9jChWhbxu6pBUVsw6gTMe3UNHzeg6/ijSjFZ1fOg07lBZQlCKw7O"], ["is_admin", true], ["created_at", "2020-11-03 07:16:00.395242"], ["updated_at", "2020-11-03 07:16:00.395242"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:5
+  [1m[36mAirplane Load (0.7ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mAirplane Destroy (0.4ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mAirplane Destroy (0.2ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mAirplane Destroy (0.2ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAirplane Create (0.3ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "GA123"], ["rows", 4], ["columns", 20]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAirplane Create (0.3ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "GA456"], ["rows", 5], ["columns", 22]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Create (0.3ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "GA789"], ["rows", 6], ["columns", 20]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "airplanes"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2965226885080345935)[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2965226885080345935)[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelhulbert/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+>>>>>>> 0e6046c84dde05cb4b52a4335d81e6a16da6ea57

@@ -1,1 +1,10 @@
 <h1>Airplanes All</h1>
+
+<div class="container">
+  <!-- Loop through all products in database and display in css grid (auto rows) -->
+  <% @airplanes.each do |airplane| %>
+    <div class="card">
+      <h3><%= link_to airplane.name, airplane %></h3>
+    </div>
+  <% end %>
+</div>
