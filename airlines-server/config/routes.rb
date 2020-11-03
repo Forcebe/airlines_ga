@@ -8,6 +8,10 @@ Rails.application.routes.draw do
 
   resources :users
 
+  # Planes
   resources :airplanes
+
+  # Flights
+  resources :flights 
 
 end
