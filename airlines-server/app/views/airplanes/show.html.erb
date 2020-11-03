@@ -12,7 +12,7 @@
         <%= link_to "Delete Airplane", @airplane, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
       </div>
     <% else %>
-      <%= button_to "Buy now $ #{ @product.price_cents / 100.0 }", checkout_create_path, :method => 'post', :class => 'btn-primary btn-card-2' %>
+        <p>Sign in as an admin to see edit & delete controls</p>
     <% end %>
   </div>
 </div>
