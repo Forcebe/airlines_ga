@@ -8,4 +8,6 @@
 
 User.destroy_all
 
-u1=User.create :email => 'example@ga.co', :password => 'chicken', :name => "Ex Ample", :is_admin => true,  
+u1=User.create :email => 'example@ga.co', :password => 'chicken', :name => "Ex Ample", :is_admin => true
+
+puts "#{User.count} users"
