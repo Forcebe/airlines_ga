@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> dea65ded73902bce920ade7d511f9b0562609148
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
@@ -8,13 +11,20 @@ import Home from './Home';
 import Admin from './Admin';
 import Plane from './Plane';
 import Flight from './Flight';
+<<<<<<< HEAD
+=======
+
+>>>>>>> dea65ded73902bce920ade7d511f9b0562609148
 
 function App() {
   return (
     <div className="App">
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> dea65ded73902bce920ade7d511f9b0562609148
         <h1> Boring Airlines </h1>
         <Router>
             <nav>
@@ -24,8 +34,8 @@ function App() {
                  <li><Link to="/admin">Admin</Link></li>
                  <li><Link to="/plane">Planes</Link></li>
                  <li><Link to="/flight">Flights</Link></li>
-             </ul>
-           </nav>
+               </ul>
+            </nav>
            <Switch>
               <Route exact path="/" component={Home}/>
               <Route exact path="/login" component={Login}/>
