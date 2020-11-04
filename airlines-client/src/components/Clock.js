@@ -4,10 +4,10 @@ class Clock extends Component{
     constructor(){
         super();
         this.state ={
-            time: (new Date()).toString()
+            time: (new Date()).toString().slice(0,25)
         }
         setInterval(() => {
-            this.setState({ time: (new Date()).toString()})
+            this.setState({ time: (new Date()).toString().slice(0,25)})
         },1000)
     }
 
