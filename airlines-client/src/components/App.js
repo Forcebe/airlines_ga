@@ -19,8 +19,8 @@ function App() {
                  <li><Link to="/admin">Admin</Link></li>
                  <li><Link to="/plane">Planes</Link></li>
                  <li><Link to="/flight">Flights</Link></li>
-             </ul>
-           </nav>
+               </ul>
+            </nav>
            <Switch>
               <Route exact path="/" component={Home}/>
               <Route exact path="/login" component={Login}/>
