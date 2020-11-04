@@ -6,12 +6,12 @@ Rails.application.routes.draw do
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
 
-  resources :users
+  resources :users, only: [:create, :show, :index ]
 
   # Planes
   resources :airplanes
 
   # Flights
-  resources :flights 
+  resources :flights
 
 end
