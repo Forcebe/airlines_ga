@@ -2,11 +2,11 @@ Rails.application.routes.draw do
   root :to => 'session#new'
 
   # Session routes to allow login and logout
-  get '/login' => 'session#new'
-  post '/login' => 'session#create'
-  delete '/login' => 'session#destroy'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+  get '/logged_in', to: 'sessions#is_logged_in?'
 
-  resources :users, only: [:create, :show, :index ]
+  resources :users, only: [:create, :show, :index]
 
   # Planes
   resources :airplanes

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import Flight from './Flight'
-=======
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
@@ -9,15 +6,11 @@ import Home from './Home';
 import Admin from './Admin';
 import Plane from './Plane';
 import Flight from './Flight';
->>>>>>> c48f11a87201f232f81127b6927c8c63479f8a42
+
 
 function App() {
   return (
     <div className="App">
-<<<<<<< HEAD
-        <h1> Test React </h1>
-        <Flight />
-=======
         <h1> Boring Airlines </h1>
         <Router>
             <nav>
@@ -37,7 +30,6 @@ function App() {
               <Route exact path="/flight" component={Flight}/>
            </Switch>
         </Router>
->>>>>>> c48f11a87201f232f81127b6927c8c63479f8a42
     </div>
   );
 }
