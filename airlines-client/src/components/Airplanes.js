@@ -7,4 +7,4 @@ class Airplanes extends Component {
     )
   }
 }
-export default Airplanes; 
+export default Airplanes;

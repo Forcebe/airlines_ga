@@ -1,10 +1,12 @@
-import Navigation from './Navigation';
+import Airplanes from './Airplanes';
+import Login from './Login';
 
 function App() {
   return (
     <div className="App">
         <h1> Test React </h1>
-        < Navigation />
+        < Airplanes />
+        < Login />
 
     </div>
   );
