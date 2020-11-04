@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component,Fragment } from 'react'
 
 class Flight extends Component {
@@ -70,3 +71,15 @@ class Flight extends Component {
 }
 
 export default Flight
+=======
+import React, { Component } from 'react';
+
+class Flight extends Component {
+  render() {
+    return (
+      <h1> Flights coming soon </h1>
+    )
+  }
+}
+export default Flight;
+>>>>>>> c48f11a87201f232f81127b6927c8c63479f8a42
