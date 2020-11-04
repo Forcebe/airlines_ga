@@ -20,20 +20,25 @@ class LoginForm extends Component {
     }
     this._handleEmail = this._handleEmail.bind(this)
     this._handlePassword = this._handlePassword.bind(this)
+    this._handleSubmit = this._handleSubmit.bind(this)
   }
-
+    // These handlers update the state with email and password
   _handleEmail(e) {
     this.setState( { email: e.target.value})
 
   }
-
   _handlePassword(e) {
     this.setState( { password: e.target.value})
+  }
+    //this handles submiting the data to the server
+  _handleSubmit(e) {
+    e.preventDefault()
+    console.log(this.state.content)
   }
 
   render() {
     return (
-      <form>
+      <form onSubmit = { this._handleSubmit }>
         <label>Email</label>
         <input
             onChange={this._handleEmail}
