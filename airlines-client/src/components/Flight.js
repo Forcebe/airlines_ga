@@ -15,7 +15,6 @@ class Flight extends Component {
         this._handlePassengerInput = this._handlePassengerInput.bind(this)
         this._handleFromInput = this._handleFromInput.bind(this)
         this._handleToInput = this._handleToInput.bind(this)
-
     }
 
     _handleSearchInput(event){
@@ -62,15 +61,12 @@ class Flight extends Component {
                     </div>
                 </form>
                     { this.state.showELement?(
-
                             <h3> {this.state.flight_number} form {this.state.from} to {this.state.to}  </h3>
                         ):null
                     }
             </Fragment>
         )
     }
-
-
 }
 
 export default Flight
