@@ -1,16 +1,30 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> dea65ded73902bce920ade7d511f9b0562609148
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
 
 import Login from './Login';
 import Home from './Home';
 import Admin from './Admin';
 import Plane from './Plane';
 import Flight from './Flight';
+<<<<<<< HEAD
+=======
 
+>>>>>>> dea65ded73902bce920ade7d511f9b0562609148
 
 function App() {
   return (
     <div className="App">
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> dea65ded73902bce920ade7d511f9b0562609148
         <h1> Boring Airlines </h1>
         <Router>
             <nav>

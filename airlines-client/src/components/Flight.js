@@ -1,4 +1,5 @@
 import React, { Component,Fragment } from 'react'
+import Clock from './Clock'
 
 class Flight extends Component {
     constructor(){
@@ -46,20 +47,24 @@ class Flight extends Component {
     render (){
         return (
             <Fragment>
+                <Clock />
+
                 <form onSubmit={ this._handleSubmit }>
                     <div>
                        <input type="search" placeholder="passenger"
                            onChange={this._handlePassengerInput}></input>
                        <input type="search" placeholder=" from "
-                           onChange={this._handleFromInput}></input>
+                           onChange={this._handleFromInput} required></input>
                        <input type="search" placeholder=" to "
-                           onChange={this._handleToInput}></input>
+                           onChange={this._handleToInput} required></input>
                     </div>
                     <div>
                        <input type="search" placeholder="search Flight" onChange={this._handleSearchInput}></input>
+                       <input type="date" ></input>
                        <input type="submit" ></input>
                     </div>
                 </form>
+                    {/*  this is for showing flight status if needed  */}
                     { this.state.showELement?(
                             <h3> {this.state.flight_number} form {this.state.from} to {this.state.to}  </h3>
                         ):null
@@ -69,4 +74,4 @@ class Flight extends Component {
     }
 }
 
-export default Flight;
+export default Flight
