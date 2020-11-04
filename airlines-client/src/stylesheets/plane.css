@@ -58,7 +58,7 @@ a {
   width: 100%;
 }
 .form {
-  width: 60%;
+  width: 100%;
   background-color: #fff;
   border-radius: 5px;
   color: #333;
@@ -91,7 +91,21 @@ a {
   background-color: #3ac573;
   color: #fff;
 }
+.h45 {
+  max-height: 45px;
+}
 .error-msg {
   padding: 20px 0;
   color: red;
+}
+/* Section */
+.section {
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 7% auto;
+  max-width: 1100px;
+  min-height: 70vh;
+}
+.section h1 {
+  font-size: 50px;
 }

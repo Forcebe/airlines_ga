@@ -4,11 +4,11 @@ import '../stylesheets/plane.css';
 class Plane extends Component {
   render() {
     return (
-      <div>
+      <div className="section">
        <div className="form">
-          <div className="grid-col-2">
-              <h1 className="title"> Boring Airlines: Planes </h1>
-              <button className="btn-primary">Create Plane</button>
+          <div className="grid-col-3">
+              <h1 className="title col-1"> Aeroplanes </h1>
+              <button className="btn-primary col-3 h45">Create Plane</button>
            </div>
            <div>
             <form className="grid-col-3">
