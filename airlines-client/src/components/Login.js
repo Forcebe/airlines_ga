@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import '../stylesheets/login.css';
 
 class Login extends Component {
   constructor (props) {
@@ -61,22 +62,25 @@ class Login extends Component {
     const {name, email, password} = this.state
 
     return (
-      <div>
-      <form onSubmit = { this._handleSubmit }>
-        <label>Email</label>
-        <input
-            autoFocus
-            type="email"
-            value={email}
-            onChange={this.handleChange}
-          />
-          <label>Password</label>
-          <input
-            type="password"
-            value={password}
-            onChange={this._handleChange}
-          />
-        <input type="submit" value="Log In" />
+      <div className="section">
+        <form onSubmit = { this._handleSubmit } className="form-login">
+          <h1> Login </h1>
+          <label>Email</label>
+            <input
+                autoFocus
+                type="email"
+                value={email}
+                onChange={this.handleChange}
+                className="form-control"
+              />
+              <label>Password</label>
+              <input
+                type="password"
+                value={password}
+                onChange={this._handleChange}
+                className="form-control"
+              />
+            <input type="submit" value="Log In" className="btn-primary"/>
 
         <div>
             or <Link to='/signup'>sign up</Link>
@@ -89,9 +93,7 @@ class Login extends Component {
       </div>
       </div>
     )
-
   }
 }
-
 
 export default Login;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import '../stylesheets/main.css';
 import Header from './Header';
 
 class App extends Component {
