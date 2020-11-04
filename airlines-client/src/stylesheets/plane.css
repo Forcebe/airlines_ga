@@ -1,0 +1,11 @@
+.form-planes {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #333;
+  padding: 20px;
+  margin: 0 auto;
+}
+.h45 {
+  max-height: 45px;
+}
