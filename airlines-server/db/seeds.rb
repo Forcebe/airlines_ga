@@ -2,6 +2,7 @@ User.destroy_all
 u1 = User.create :email => 'nick@ga.com', :name => 'Nick', :password => 'chicken', :is_admin => true
 u2 = User.create :email => 'mike@ga.com', :name => 'Mike', :password => 'chicken', :is_admin => true
 u3 = User.create :email => 'henry@ga.com', :name => 'Henry', :password => 'chicken',  :is_admin => true
+u4 = User.create :email => 'user@ga.com', :name => 'user', :password => 'chicken',  :is_admin => false
 puts "#{ User.count } users"
 
 Airplane.destroy_all

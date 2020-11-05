@@ -62,10 +62,26 @@ class Header extends Component {
               <h1 className="logo"> Boring Airlines </h1>
                 <ul>
                   <li><Link to="/">Home</Link></li>
-                  <li><Link to="/login">Login</Link></li>
-                  <li><Link to="/admin">Admin</Link></li>
-                  <li><Link to="/plane">Planes</Link></li>
-                  <li><Link to="/flight">Flights</Link></li>
+
+                  {
+                    !this.state.isLoggedIn ?
+                    <li>
+                      <Link to="/login">Login</Link>
+                    </li> : null
+                  }
+                  {
+                    this.state.user && this.state.user.is_admin ?
+                    <li><Link to="/admin">Admin</Link></li> :null
+                  }
+                  {
+                    this.state.user && this.state.user.is_admin ?
+                    <li><Link to="/plane">Planes</Link></li> :null
+                  }
+                  {
+                    this.state.user && this.state.user.is_admin ?
+                    <li><Link to="/flight">Flights</Link></li> :null
+                  }
+
                 </ul>
              </nav>
            </div>
