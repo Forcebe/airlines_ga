@@ -9,3 +9,13 @@
 .h45 {
   max-height: 45px;
 }
+.section-2 {
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 7% auto;
+  max-width: 1100px;
+  min-height: auto;
+}
+.section-2 h1 {
+  font-size: 50px;
+}

@@ -69,14 +69,14 @@ class Login extends Component {
     return (
       <div className="section">
         <form onSubmit = { this._handleSubmit } className="form-login">
-          <h1> Login </h1>
+          <h1 className="margin-20"> Login </h1>
           <input
             placeholder="email"
             type="text"
             name="email"
             value={email}
             onChange={this._handleChange}
-            className="form-control"
+            className="form-control margin-20"
           />
           <input
             placeholder="password"
@@ -84,9 +84,9 @@ class Login extends Component {
             name="password"
             onChange={this._handleChange}
             value={password}
-            className="form-control"
+            className="form-control margin-20"
           />
-            <input type="submit" value="Log In" className="btn-primary"/>
+            <input type="submit" value="Log In" className="btn-primary margin-20"/>
 
         <div>
             or <Link to='/signup'>sign up</Link>
