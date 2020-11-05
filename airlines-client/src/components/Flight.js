@@ -2,6 +2,8 @@ import React, { Component,Fragment } from 'react';
 import Clock from './Clock';
 import '../stylesheets/flight.css';
 
+const SERVER_URL = 'http://localhost3000/flights.json';
+
 class Flight extends Component {
     constructor(){
         super();
@@ -50,7 +52,7 @@ class Flight extends Component {
         <Fragment>
           <Clock />
             <div className="section">
-              <div className="form-planes">
+              <div className="form">
                 <div className="grid-col-3">
                   <h1 className="title col-1"> Flights </h1>
                   <button className="btn-primary col-3 h45">Create Flight</button>
