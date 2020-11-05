@@ -1,6 +1,8 @@
 import React, { Component,Fragment } from 'react'
 import Clock from './Clock'
 
+const SERVER_URL = 'http://localhost3000/flights.json';
+
 class Flight extends Component {
     constructor(){
         super();
@@ -40,9 +42,7 @@ class Flight extends Component {
 
     _handleSubmit( event ){
         event.preventDefault();
-        this.setState({showELement: true,
-
-                      })
+        this.setState({showELement: true})
         console.log(event.target.value);
     }
 
@@ -50,7 +50,6 @@ class Flight extends Component {
         return (
             <Fragment>
                 <Clock />
-
                 <form onSubmit={ this._handleSubmit }>
                     <div>
                        <input type="search" placeholder="passenger"
