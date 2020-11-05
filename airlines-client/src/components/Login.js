@@ -4,24 +4,29 @@ import {Link} from 'react-router-dom';
 import '../stylesheets/login.css';
 
 class Login extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       email: '',
       password: '',
-      errors: '',
-    };
+      errors: ''
+     };
+  }
+  UNSAFE_componentWillMount() {
+    return this.props.loggedInStatus ? this.redirect() : null
   }
 
   // These handlers update the state with email and password
-  _handleChange = (e) => {
-    const {name, value} =e.target
-    this.setState( { [name]: value})
+  _handleChange = (event) => {
+    const {name, value} = event.target
+    this.setState({
+      [name]: value
+    })
   };
   //this handles submiting the data to the server
-  _handleSubmit = (e) => {
-    e.preventDefault()
-    const {name, email, password} = this.state
+  _handleSubmit = (event) => {
+    event.preventDefault()
+    const {username, email, password} = this.state
 
     let user = {
       email: email,
@@ -42,21 +47,21 @@ class Login extends Component {
     .catch(error => console.log('api errors:', error))
   };
 
-    redirect = () => {
-      this.props.history.push('/')
-    }
-
-    handleErrors = () => {
-      return (
-        <div>
-          <ul>
-            {this.state.errors.map(error => {
-              return <li key={error}>{error}</li>
-            })}
-          </ul>
-        </div>
-      )
-    }
+  redirect = () => {
+  this.props.history.push('/')
+  }
+  handleErrors = () => {
+    return (
+      <div>
+        <ul>
+        {this.state.errors.map(error => {
+          return <li key={error}>{error}</li>
+          })
+        }
+        </ul>
+      </div>
+    )
+  }
 
   render() {
     const {name, email, password} = this.state
@@ -65,21 +70,22 @@ class Login extends Component {
       <div className="section">
         <form onSubmit = { this._handleSubmit } className="form-login">
           <h1> Login </h1>
-          <label>Email</label>
-            <input
-                autoFocus
-                type="email"
-                value={email}
-                onChange={this.handleChange}
-                className="form-control"
-              />
-              <label>Password</label>
-              <input
-                type="password"
-                value={password}
-                onChange={this._handleChange}
-                className="form-control"
-              />
+          <input
+            placeholder="email"
+            type="text"
+            name="email"
+            value={email}
+            onChange={this._handleChange}
+            className="form-control"
+          />
+          <input
+            placeholder="password"
+            type="password"
+            name="password"
+            onChange={this._handleChange}
+            value={password}
+            className="form-control"
+          />
             <input type="submit" value="Log In" className="btn-primary"/>
 
         <div>

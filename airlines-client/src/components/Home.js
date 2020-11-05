@@ -17,7 +17,7 @@ const Home = (props) => {
       <h1>Home Page</h1>
       {
         props.loggedInStatus ?
-        <p>Logged in as {props.user}</p> : null
+        <p>Logged in as {props.user && props.user.name}</p> : null
       }
       {
         props.loggedInStatus ?
