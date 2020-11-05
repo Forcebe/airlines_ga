@@ -11,8 +11,8 @@
 </p>
 
 <p>
-  <strong>Resevations:</strong>
-  <%= @user.resevation_id %>
+  <strong>Password</strong>
+  <%= @user.password_digest %>
 </p>
 
 <p>
@@ -20,5 +20,4 @@
   <%= @user.is_admin %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

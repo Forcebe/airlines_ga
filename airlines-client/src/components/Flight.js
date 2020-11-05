@@ -1,5 +1,6 @@
-import React, { Component,Fragment } from 'react'
-import Clock from './Clock'
+import React, { Component,Fragment } from 'react';
+import Clock from './Clock';
+import '../stylesheets/flight.css';
 
 const SERVER_URL = 'http://localhost3000/flights.json';
 
@@ -42,41 +43,37 @@ class Flight extends Component {
 
     _handleSubmit( event ){
         event.preventDefault();
-        this.setState({showELement: true})
+        this.setState({showELement: true });
         console.log(event.target.value);
     }
 
     render (){
-        return (
-            <Fragment>
-                <Clock />
-                <form onSubmit={ this._handleSubmit }>
-                    <div>
-                       <input type="search" placeholder="passenger"
-                           onChange={this._handlePassengerInput}></input>
-
-                       <input type="search" placeholder=" from "
-                           onChange={this._handleFromInput} required>
-                           </input>
+      return (
+        <Fragment>
+          <Clock />
+            <div className="section">
+              <div className="form-planes">
+                <div className="grid-col-3">
+                  <h1 className="title col-1"> Flights </h1>
+                  <button className="btn-primary col-3 h45">Create Flight</button>
+                </div>
+                <form onSubmit={ this._handleSubmit } className="grid-col-3">
+                    <input type="search" placeholder="passenger" onChange={this._handlePassengerInput} className="form-control row-1 col-1"/>
+                    <input type="search" placeholder=" from "
+                           onChange={this._handleFromInput} required className="form-control row-1 col-2" />
                        <input type="search" placeholder=" to "
-                           onChange={this._handleToInput} required></input>
-                    </div>
-
-                    <div>
-                       <input type="search" placeholder="search Flight" onChange={this._handleSearchInput}></input>
-                       <input type="date" ></input>
-                       <input type="submit" ></input>
-                    </div>
+                           onChange={this._handleToInput} required className="form-control  row-1 col-3" />
+                       <input type="search" placeholder="search Flight" onChange={this._handleSearchInput} className="form-control  row-2 col-1"/>
+                       <input type="date" className="form-control  row-2 col-2" />
+                       <input type="submit" className="btn-primary row-2 col-3"/>
                 </form>
                     {/*  this is for showing flight status if needed  */}
-                    { this.state.showELement?(
-                            <h3> {this.state.flight_number} form {this.state.from} to {this.state.to}
-                            </h3>
-                        ):null
-                    }
+                    { this.state.showELement?(<h3> {this.state.flight_number} form {this.state.from} to {this.state.to}</h3>):null }
+                </div>
+              </div>
             </Fragment>
-        )
+        );
+      }
     }
-}
 
-export default Flight
+    export default Flight;
