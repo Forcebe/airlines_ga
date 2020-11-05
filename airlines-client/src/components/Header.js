@@ -6,7 +6,7 @@ import '../stylesheets/header.css';
 import Login from './Login';
 import Home from './Home';
 import Admin from './Admin';
-import Plane from './Plane';
+import Plane from './Airplane/Plane';
 import Flight from './Flight';
 
 class Header extends Component {
