@@ -1,7 +1,7 @@
+import React from 'react';
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 import FlightForm from './FlightForm'
-import FlightResults from './FlightResults'
 
 const Home = (props) => {
   const handleClick = () => {
@@ -15,7 +15,6 @@ const Home = (props) => {
 
   return (
     <div>
-      <h1>Flight Search</h1>
       {
         props.loggedInStatus ?
         <p>Logged in as {props.user && props.user.name}</p> : null
@@ -24,10 +23,10 @@ const Home = (props) => {
         props.loggedInStatus ?
         <Link to='/logout' onClick={handleClick}>Log Out</Link> : null
       }
-
-      <FlightForm />
-      <FlightResults />
-
+      {
+        props.loggedInStatus ?
+        <FlightForm /> : null
+      }
     </div>
   )
 }
