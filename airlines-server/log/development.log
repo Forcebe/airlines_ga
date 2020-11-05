@@ -961,66 +961,6 @@ Migrating to CreateFlights (20201103085420)
   ↳ db/seeds.rb:17
   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "flights"[0m
   ↳ db/seeds.rb:18
-<<<<<<< HEAD
-Started GET "/" for ::1 at 2020-11-03 22:04:53 +1100
-  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/henryzhang/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
-Processing by SessionController#new as HTML
-  Rendering session/new.html.erb within layouts/application
-  Rendered session/new.html.erb within layouts/application (2.8ms)
-Completed 200 OK in 399ms (Views: 395.4ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/airplanes" for ::1 at 2020-11-04 07:35:42 +1100
-Processing by AirplanesController#index as HTML
-  Rendering airplanes/index.html.erb within layouts/application
-  [1m[36mAirplane Load (6.0ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
-  ↳ app/views/airplanes/index.html.erb:5
-  Rendered airplanes/index.html.erb within layouts/application (29.1ms)
-Completed 200 OK in 52ms (Views: 22.4ms | ActiveRecord: 22.7ms)
-
-
-Started GET "/airplanes/4" for ::1 at 2020-11-04 07:35:52 +1100
-Processing by AirplanesController#show as HTML
-  Parameters: {"id"=>"4"}
-  [1m[36mAirplane Load (0.4ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/controllers/airplanes_controller.rb:16
-  Rendering airplanes/show.html.erb within layouts/application
-  Rendered airplanes/show.html.erb within layouts/application (0.8ms)
-Completed 200 OK in 19ms (Views: 14.2ms | ActiveRecord: 0.6ms)
-
-
-Started GET "/flights" for ::1 at 2020-11-04 07:35:59 +1100
-  
-ActionController::RoutingError (uninitialized constant FlightsController):
-  
-bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
-bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
-bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
-bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `const_get'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `block in constantize'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `each'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `inject'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `constantize'
-actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
-actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
-actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:46:in `controller'
-actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
-actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
-actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
-actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
-actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
-rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
-rack (2.2.3) lib/rack/etag.rb:27:in `call'
-rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
-rack (2.2.3) lib/rack/head.rb:12:in `call'
-actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
-rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
-rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
-actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
-activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
-=======
 Started GET "/" for ::1 at 2020-11-04 09:08:24 +1100
   [1m[35m (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/nicholasmather/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
@@ -1101,7 +1041,6 @@ Migrations are pending. To resolve this issue, run:
 
 activerecord (5.2.4.4) lib/active_record/migration.rb:579:in `check_pending!'
 activerecord (5.2.4.4) lib/active_record/migration.rb:556:in `call'
->>>>>>> c48f11a87201f232f81127b6927c8c63479f8a42
 actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
 activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
@@ -1133,68 +1072,6 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-<<<<<<< HEAD
-Started GET "/airplanes" for ::1 at 2020-11-04 07:42:32 +1100
-Processing by AirplanesController#index as HTML
-  Rendering airplanes/index.html.erb within layouts/application
-  [1m[36mAirplane Load (0.9ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
-  ↳ app/views/airplanes/index.html.erb:5
-  Rendered airplanes/index.html.erb within layouts/application (2.3ms)
-Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 0.9ms)
-
-
-Started GET "/airplanes" for ::1 at 2020-11-04 08:03:11 +1100
-  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/henryzhang/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
-Processing by AirplanesController#index as HTML
-  Rendering airplanes/index.html.erb within layouts/application
-  [1m[36mAirplane Load (0.7ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
-  ↳ app/views/airplanes/index.html.erb:5
-  Rendered airplanes/index.html.erb within layouts/application (14.7ms)
-Completed 200 OK in 368ms (Views: 351.0ms | ActiveRecord: 8.9ms)
-
-
-Started GET "/airplanes/4" for ::1 at 2020-11-04 08:03:16 +1100
-Processing by AirplanesController#show as HTML
-  Parameters: {"id"=>"4"}
-  [1m[36mAirplane Load (0.5ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" WHERE "airplanes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/controllers/airplanes_controller.rb:16
-  Rendering airplanes/show.html.erb within layouts/application
-  Rendered airplanes/show.html.erb within layouts/application (1.1ms)
-Completed 200 OK in 55ms (Views: 48.7ms | ActiveRecord: 0.8ms)
-
-
-Started GET "/flights" for ::1 at 2020-11-04 08:03:20 +1100
-  
-ActionController::RoutingError (uninitialized constant FlightsController):
-  
-bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
-bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
-bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
-bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `const_get'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `block in constantize'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `each'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `inject'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `constantize'
-actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
-actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
-actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:46:in `controller'
-actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
-actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
-actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
-actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
-actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
-rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
-rack (2.2.3) lib/rack/etag.rb:27:in `call'
-rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
-rack (2.2.3) lib/rack/head.rb:12:in `call'
-actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
-rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
-rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
-actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
-activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
-=======
 Started GET "/" for ::1 at 2020-11-04 09:11:09 +1100
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/nicholasmather/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
@@ -1254,7 +1131,6 @@ Migrations are pending. To resolve this issue, run:
 
 activerecord (5.2.4.4) lib/active_record/migration.rb:579:in `check_pending!'
 activerecord (5.2.4.4) lib/active_record/migration.rb:556:in `call'
->>>>>>> c48f11a87201f232f81127b6927c8c63479f8a42
 actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
 activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
@@ -1286,38 +1162,6 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-<<<<<<< HEAD
-Started GET "/flights" for ::1 at 2020-11-04 08:03:23 +1100
-  
-ActionController::RoutingError (uninitialized constant FlightsController):
-  
-bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
-bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
-bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
-bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `const_get'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `block in constantize'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `each'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `inject'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `constantize'
-actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
-actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
-actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:46:in `controller'
-actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
-actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
-actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
-actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
-actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
-rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
-rack (2.2.3) lib/rack/etag.rb:27:in `call'
-rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
-rack (2.2.3) lib/rack/head.rb:12:in `call'
-actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
-rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
-rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
-actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
-activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
-=======
 Started GET "/" for ::1 at 2020-11-04 09:11:23 +1100
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/nicholasmather/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
@@ -1332,7 +1176,6 @@ Migrations are pending. To resolve this issue, run:
 
 activerecord (5.2.4.4) lib/active_record/migration.rb:579:in `check_pending!'
 activerecord (5.2.4.4) lib/active_record/migration.rb:556:in `call'
->>>>>>> c48f11a87201f232f81127b6927c8c63479f8a42
 actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
 activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
@@ -1364,43 +1207,6 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-<<<<<<< HEAD
-Started GET "/" for ::1 at 2020-11-04 08:42:06 +1100
-  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/henryzhang/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
-Processing by SessionController#new as HTML
-  Rendering session/new.html.erb within layouts/application
-  Rendered session/new.html.erb within layouts/application (2.7ms)
-Completed 200 OK in 333ms (Views: 327.4ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/airplanes" for ::1 at 2020-11-04 08:42:13 +1100
-Processing by AirplanesController#index as HTML
-  Rendering airplanes/index.html.erb within layouts/application
-  [1m[36mAirplane Load (1.1ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
-  ↳ app/views/airplanes/index.html.erb:5
-  Rendered airplanes/index.html.erb within layouts/application (18.5ms)
-Completed 200 OK in 42ms (Views: 28.6ms | ActiveRecord: 8.3ms)
-
-
-Started GET "/flights/new" for ::1 at 2020-11-04 08:42:29 +1100
-  
-ActionController::RoutingError (uninitialized constant FlightsController):
-  
-bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
-bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
-bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
-bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `const_get'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `block in constantize'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `each'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `inject'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `constantize'
-actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
-actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
-actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:46:in `controller'
-actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
-=======
 Started GET "/" for ::1 at 2020-11-04 09:11:24 +1100
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/nicholasmather/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
@@ -1835,7 +1641,6 @@ actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
 actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
 actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
 actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
->>>>>>> c48f11a87201f232f81127b6927c8c63479f8a42
 actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
 actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
 actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
@@ -1880,29 +1685,6 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-<<<<<<< HEAD
-Started GET "/flights/new" for ::1 at 2020-11-04 08:43:55 +1100
-  
-LoadError (Unable to autoload constant FlightsController, expected /Users/henryzhang/practise/airline/airlines_ga/airlines-server/app/controllers/flights_controller.rb to define it):
-  
-activesupport (5.2.4.4) lib/active_support/dependencies.rb:511:in `load_missing_constant'
-bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:61:in `block in load_missing_constant'
-bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:17:in `allow_bootsnap_retry'
-bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:60:in `load_missing_constant'
-activesupport (5.2.4.4) lib/active_support/dependencies.rb:195:in `const_missing'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `const_get'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `block in constantize'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `each'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `inject'
-activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `constantize'
-activesupport (5.2.4.4) lib/active_support/dependencies.rb:582:in `get'
-activesupport (5.2.4.4) lib/active_support/dependencies.rb:613:in `constantize'
-actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
-actionpack (5.2.4.4) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
-actionpack (5.2.4.4) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
-actionpack (5.2.4.4) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
-actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
-=======
 Started GET "/airplanes" for ::1 at 2020-11-04 09:44:28 +1100
 Processing by AirplanesController#index as HTML
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
@@ -1962,7 +1744,6 @@ actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
 actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
 actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
 actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
->>>>>>> c48f11a87201f232f81127b6927c8c63479f8a42
 actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
 actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
 actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
@@ -2006,15 +1787,6 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-<<<<<<< HEAD
-Started GET "/flights/new" for ::1 at 2020-11-04 08:47:27 +1100
-  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/henryzhang/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
-  
-AbstractController::ActionNotFound (The action 'new' could not be found for FlightsController):
-  
-actionpack (5.2.4.4) lib/abstract_controller/base.rb:129:in `process'
-=======
 Started GET "/airplanes.json" for ::1 at 2020-11-04 09:55:09 +1100
 Processing by AirplanesController#index as JSON
   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
@@ -2046,7 +1818,6 @@ actionpack (5.2.4.4) lib/action_controller/metal/instrumentation.rb:32:in `proce
 actionpack (5.2.4.4) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
 activerecord (5.2.4.4) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
 actionpack (5.2.4.4) lib/abstract_controller/base.rb:134:in `process'
->>>>>>> c48f11a87201f232f81127b6927c8c63479f8a42
 actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
 actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
 actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
@@ -2096,8 +1867,6 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-<<<<<<< HEAD
-=======
 Started GET "/users.json" for ::1 at 2020-11-04 09:56:59 +1100
 Processing by UsersController#index as JSON
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
@@ -2194,9 +1963,9 @@ Completed 200 OK in 191ms (Views: 142.1ms | ActiveRecord: 30.0ms)
 
 
 Started GET "/info" for ::1 at 2020-11-04 11:55:42 +1100
-  
+
 ActionController::RoutingError (No route matches [GET] "/info"):
-  
+
 actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -2233,13 +2002,12 @@ Processing by SessionController#new as HTML
 Completed 200 OK in 32ms (Views: 29.6ms | ActiveRecord: 0.5ms)
 
 
->>>>>>> c48f11a87201f232f81127b6927c8c63479f8a42
 Started GET "/info" for ::1 at 2020-11-04 14:14:28 +1100
   [1m[35m (13.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/nicholasmather/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
-  
+
 ActionController::RoutingError (No route matches [GET] "/info"):
-  
+
 actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -2271,9 +2039,9 @@ puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
 Started GET "/info" for ::1 at 2020-11-05 09:23:17 +1100
   [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/nicholasmather/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
-  
+
 ActionController::RoutingError (No route matches [GET] "/info"):
-  
+
 actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -2303,9 +2071,9 @@ puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
 Started GET "/login" for ::1 at 2020-11-05 09:23:30 +1100
-  
+
 ActionController::RoutingError (No route matches [GET] "/login"):
-  
+
 actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -2335,9 +2103,9 @@ puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
 Started GET "/logged_in" for ::1 at 2020-11-05 09:27:06 +1100
-  
+
 ActionController::RoutingError (uninitialized constant SessionsController):
-  
+
 bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
 bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
 bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
@@ -2397,9 +2165,9 @@ puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
 Started GET "/logged_in,json" for ::1 at 2020-11-05 09:29:04 +1100
-  
+
 ActionController::RoutingError (No route matches [GET] "/logged_in,json"):
-  
+
 actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -2429,9 +2197,9 @@ puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
 Started GET "/logged_in.json" for ::1 at 2020-11-05 09:29:09 +1100
-  
+
 ActionController::RoutingError (uninitialized constant SessionsController):
-  
+
 bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
 bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
 bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
@@ -2496,9 +2264,9 @@ Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/login" for ::1 at 2020-11-05 09:31:31 +1100
-  
+
 ActionController::RoutingError (No route matches [GET] "/login"):
-  
+
 actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -2731,9 +2499,9 @@ Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 2.8ms)
 
 
 Started GET "/userts" for ::1 at 2020-11-05 09:38:29 +1100
-  
+
 ActionController::RoutingError (No route matches [GET] "/userts"):
-  
+
 actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -2771,7 +2539,7 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 70ms (ActiveRecord: 4.5ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `edit_user_path' for #<#<Class:0x00007ff06004c3a8>:0x00007ff061cb99a0>
 Did you mean?  edit_airplane_path):
     19:         <td><%= user.name %></td>
@@ -2781,7 +2549,7 @@ Did you mean?  edit_airplane_path):
     23:         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     24:       </tr>
     25:     <% end %>
-  
+
 app/views/users/index.html.erb:22:in `block in _app_views_users_index_html_erb___629757317288754592_15020'
 app/views/users/index.html.erb:16:in `_app_views_users_index_html_erb___629757317288754592_15020'
 Started GET "/users" for ::1 at 2020-11-05 09:39:25 +1100
@@ -2793,19 +2561,19 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 110ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `new_user_path' for #<#<Class:0x00007ff06004c3a8>:0x00007ff061ed8b50>
 Did you mean?  new_airplane_path):
-    26: 
+    26:
     27: <br>
-    28: 
+    28:
     29: <%= link_to 'New User', new_user_path %>
-  
+
 app/views/users/index.html.erb:29:in `_app_views_users_index_html_erb___629757317288754592_15720'
 Started GET "/info" for ::1 at 2020-11-05 09:39:45 +1100
-  
+
 ActionController::RoutingError (No route matches [GET] "/info"):
-  
+
 actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -2853,15 +2621,15 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 100ms (ActiveRecord: 9.6ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `edit_user_path' for #<#<Class:0x00007ff06004c3a8>:0x00007ff061fd3a28>
 Did you mean?  edit_airplane_path):
     20:   <%= @user.is_admin %>
     21: </p>
-    22: 
+    22:
     23: <%= link_to 'Edit', edit_user_path(@user) %> |
     24: <%= link_to 'Back', users_path %>
-  
+
 app/views/users/show.html.erb:23:in `_app_views_users_show_html_erb___2834375863656298448_17120'
 Started GET "/users/4" for ::1 at 2020-11-05 09:40:05 +1100
 Processing by UsersController#show as HTML
@@ -3218,14 +2986,596 @@ Processing by SessionsController#is_logged_in? as HTML
   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
   ↳ app/controllers/application_controller.rb:16
 Completed 200 OK in 24ms (Views: 11.2ms | ActiveRecord: 1.1ms)
+Started GET "/logged_in" for ::1 at 2020-11-05 10:33:44 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
 
 
-Started GET "/" for ::1 at 2020-11-05 12:07:27 +1100
-  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/michaelhulbert/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
-  
+Started GET "/logged_in" for ::1 at 2020-11-05 10:34:03 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 3.5ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-11-05 10:34:05 +1100
+Processing by SessionsController#destroy as HTML
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-11-05 10:34:19 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"nick@ga.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"nick@ga.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (22.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nick@ga.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4
+Completed 200 OK in 240ms (Views: 0.3ms | ActiveRecord: 22.6ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 10:35:01 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 47ms (Views: 7.8ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 10:37:10 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 17ms (Views: 2.2ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 10:37:50 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 14ms (Views: 1.6ms | ActiveRecord: 9.0ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-11-05 10:38:03 +1100
+Processing by SessionsController#destroy as HTML
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-11-05 10:38:12 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"nick@ga.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"nick@ga.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nick@ga.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4
+Completed 200 OK in 225ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 10:39:51 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (88.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 114ms (Views: 10.5ms | ActiveRecord: 88.9ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-11-05 10:39:56 +1100
+Processing by SessionsController#destroy as HTML
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-11-05 10:40:08 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"nick@ga.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"nick@ga.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nick@ga.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4
+Completed 200 OK in 223ms (Views: 0.3ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 10:42:16 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 27ms (Views: 4.7ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 10:42:47 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 10:43:15 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 10:43:41 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 10:45:20 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 15ms (Views: 4.3ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 10:49:47 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (16.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 36ms (Views: 3.9ms | ActiveRecord: 16.6ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 10:52:47 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (145.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 281ms (Views: 20.2ms | ActiveRecord: 145.1ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 10:52:52 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 8ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 10:54:33 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (23.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 50ms (Views: 5.3ms | ActiveRecord: 23.8ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 10:54:59 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 19ms (Views: 6.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 10:55:03 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 10:56:01 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (9.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 38ms (Views: 10.3ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 10:56:05 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (35.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 37ms (Views: 0.6ms | ActiveRecord: 35.4ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-11-05 10:56:19 +1100
+Processing by SessionsController#destroy as HTML
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-11-05 10:56:30 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"nick@ga.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"nick@ga.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nick@ga.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4
+Completed 200 OK in 223ms (Views: 0.9ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 10:56:48 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 12ms (Views: 4.2ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-11-05 10:57:19 +1100
+Processing by SessionsController#destroy as HTML
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 11:05:31 +1100
+Processing by SessionsController#is_logged_in? as HTML
+Completed 200 OK in 7ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 11:05:31 +1100
+Processing by SessionsController#is_logged_in? as HTML
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 11:08:50 +1100
+Processing by SessionsController#is_logged_in? as HTML
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 11:08:59 +1100
+Processing by SessionsController#is_logged_in? as HTML
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-11-05 11:09:12 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"nick@ga.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"nick@ga.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nick@ga.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4
+Completed 200 OK in 226ms (Views: 1.6ms | ActiveRecord: 4.6ms)
+
+
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (4.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (91.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:1
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (1.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nick@ga.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (34.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "password_digest", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "nick@ga.com"], ["name", "Nick"], ["password_digest", "$2a$12$xPs0nJsXA54xF5/8MHJ37ONoyUtiPPnNk3tX/fHdQKQ9NGG27vSm6"], ["is_admin", true], ["created_at", "2020-11-05 00:12:23.092083"], ["updated_at", "2020-11-05 00:12:23.092083"]]
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mike@ga.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (4.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "password_digest", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "mike@ga.com"], ["name", "Mike"], ["password_digest", "$2a$12$7agc5do4DTYcpg2oAZBNoOZddommWlsjKNHzFoxdd1oPs4rzhxaUG"], ["is_admin", true], ["created_at", "2020-11-05 00:12:23.339998"], ["updated_at", "2020-11-05 00:12:23.339998"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "henry@ga.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "password_digest", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "henry@ga.com"], ["name", "Henry"], ["password_digest", "$2a$12$I0znDPXyXz1xeY/RWLN44OwOT.2Xsr1e9VzHcqAd7UTrXz03h10Pa"], ["is_admin", true], ["created_at", "2020-11-05 00:12:23.553161"], ["updated_at", "2020-11-05 00:12:23.553161"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:5
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user@ga.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:5
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "password_digest", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "user@ga.com"], ["name", "user"], ["password_digest", "$2a$12$v5RiMkRVvJYyFJJwCoumXuiAkcAhgIE3JOxzWjEsUCAy6L9NpDIau"], ["is_admin", false], ["created_at", "2020-11-05 00:12:23.762937"], ["updated_at", "2020-11-05 00:12:23.762937"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:6
+  [1m[36mAirplane Load (4.5ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mAirplane Destroy (0.2ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mAirplane Destroy (0.2ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mAirplane Destroy (0.2ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:8
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAirplane Create (0.6ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "GA123"], ["rows", 4], ["columns", 20]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Create (0.8ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "GA456"], ["rows", 5], ["columns", 22]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mAirplane Create (0.2ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "GA789"], ["rows", 6], ["columns", 20]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "airplanes"[0m
+  ↳ db/seeds.rb:13
+  [1m[36mFlight Load (4.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mFlight Destroy (0.8ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mFlight Destroy (0.2ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mFlight Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mFlight Create (0.9ms)[0m  [1m[32mINSERT INTO "flights" ("flight_number", "origin", "destination", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flight_number", "VA189"], ["origin", "Sydney"], ["destination", "Melbourne"], ["created_at", "2020-11-05 00:12:23.816524"], ["updated_at", "2020-11-05 00:12:23.816524"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mFlight Create (0.2ms)[0m  [1m[32mINSERT INTO "flights" ("flight_number", "origin", "destination", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flight_number", "JQ252"], ["origin", "Adelaide"], ["destination", "Perth"], ["created_at", "2020-11-05 00:12:23.818804"], ["updated_at", "2020-11-05 00:12:23.818804"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mFlight Create (0.2ms)[0m  [1m[32mINSERT INTO "flights" ("flight_number", "origin", "destination", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flight_number", "CA369"], ["origin", "Canberra"], ["destination", "Lismore"], ["created_at", "2020-11-05 00:12:23.820296"], ["updated_at", "2020-11-05 00:12:23.820296"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "flights"[0m
+  ↳ db/seeds.rb:19
+Started GET "/logged_in" for ::1 at 2020-11-05 11:12:40 +1100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 404 Not Found in 19ms (ActiveRecord: 6.7ms)
+
+
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=4):
+
+app/controllers/application_controller.rb:16:in `current_user'
+app/controllers/sessions_controller.rb:20:in `is_logged_in?'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:1
+  [1m[35m (15.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nick@ga.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:2
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "password_digest", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "nick@ga.com"], ["name", "Nick"], ["password_digest", "$2a$12$I31YwiTpL3C/kRH0BJAyo.wpShB5HvHYhbXx9iGYd7DFWtUNLfZiq"], ["is_admin", true], ["created_at", "2020-11-05 00:13:00.369166"], ["updated_at", "2020-11-05 00:13:00.369166"]]
+  ↳ db/seeds.rb:2
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mike@ga.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "password_digest", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "mike@ga.com"], ["name", "Mike"], ["password_digest", "$2a$12$ZNG/rtdDGl3UJjn1mP76p.7dLIEx16xsG83FPoT/Nx2kMhiFA7wLS"], ["is_admin", true], ["created_at", "2020-11-05 00:13:00.585247"], ["updated_at", "2020-11-05 00:13:00.585247"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "henry@ga.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "password_digest", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "henry@ga.com"], ["name", "Henry"], ["password_digest", "$2a$12$G6p9ebbA2cl/2s9U1SSKiupm8PF5kti95wDRXyKODbtRjGM0y1jgK"], ["is_admin", true], ["created_at", "2020-11-05 00:13:00.793937"], ["updated_at", "2020-11-05 00:13:00.793937"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:5
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user@ga.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:5
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "password_digest", "is_admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "user@ga.com"], ["name", "user"], ["password_digest", "$2a$12$W1mCcannr2BsvzLbg.Wozu8aVtdNIamAFppp4HB5tzChAgRQldqxO"], ["is_admin", false], ["created_at", "2020-11-05 00:13:01.003298"], ["updated_at", "2020-11-05 00:13:01.003298"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:6
+  [1m[36mAirplane Load (0.6ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mAirplane Destroy (0.2ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mAirplane Destroy (0.2ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mAirplane Destroy (0.3ms)[0m  [1m[31mDELETE FROM "airplanes" WHERE "airplanes"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAirplane Create (0.3ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "GA123"], ["rows", 4], ["columns", 20]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Create (0.2ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "GA456"], ["rows", 5], ["columns", 22]]
+  ↳ db/seeds.rb:11
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mAirplane Create (0.3ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "rows", "columns") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "GA789"], ["rows", 6], ["columns", 20]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "airplanes"[0m
+  ↳ db/seeds.rb:13
+  [1m[36mFlight Load (0.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mFlight Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mFlight Destroy (0.2ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mFlight Destroy (0.2ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mFlight Create (0.3ms)[0m  [1m[32mINSERT INTO "flights" ("flight_number", "origin", "destination", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flight_number", "VA189"], ["origin", "Sydney"], ["destination", "Melbourne"], ["created_at", "2020-11-05 00:13:01.049537"], ["updated_at", "2020-11-05 00:13:01.049537"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mFlight Create (0.3ms)[0m  [1m[32mINSERT INTO "flights" ("flight_number", "origin", "destination", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flight_number", "JQ252"], ["origin", "Adelaide"], ["destination", "Perth"], ["created_at", "2020-11-05 00:13:01.051210"], ["updated_at", "2020-11-05 00:13:01.051210"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mFlight Create (0.3ms)[0m  [1m[32mINSERT INTO "flights" ("flight_number", "origin", "destination", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["flight_number", "CA369"], ["origin", "Canberra"], ["destination", "Lismore"], ["created_at", "2020-11-05 00:13:01.052784"], ["updated_at", "2020-11-05 00:13:01.052784"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "flights"[0m
+  ↳ db/seeds.rb:19
+Started GET "/logged_in" for ::1 at 2020-11-05 11:13:17 +1100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 404 Not Found in 18ms (ActiveRecord: 6.4ms)
+
+
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=4):
+
+app/controllers/application_controller.rb:16:in `current_user'
+app/controllers/sessions_controller.rb:20:in `is_logged_in?'
+Started POST "/login" for ::1 at 2020-11-05 11:14:10 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"nick@ga.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"nick@ga.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nick@ga.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4
+Completed 200 OK in 220ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 11:16:08 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (13.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 30ms (Views: 4.3ms | ActiveRecord: 13.5ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-11-05 11:16:13 +1100
+Processing by SessionsController#destroy as HTML
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-11-05 11:16:27 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"nick@ga.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"nick@ga.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nick@ga.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4
+Completed 200 OK in 219ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-11-05 11:16:35 +1100
+Processing by SessionsController#destroy as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-11-05 11:16:54 +1100
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"user@ga.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"user@ga.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user@ga.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4
+Completed 200 OK in 215ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 11:54:41 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (11.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 208ms (Views: 117.7ms | ActiveRecord: 23.6ms)
+
+
+Started GET "/logged_in" for ::1 at 2020-11-05 11:54:44 +1100
+Processing by SessionsController#is_logged_in? as HTML
+  [1m[36mUser Load (17.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 26ms (Views: 0.6ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/" for ::1 at 2020-11-05 11:55:20 +1100
+
 ActionController::RoutingError (uninitialized constant SessionController):
-  
+
 bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
 bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
 bootsnap (1.5.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
@@ -3332,9 +3682,9 @@ Processing by FlightsController#show as HTML
 Completed 404 Not Found in 4ms (ActiveRecord: 0.6ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Flight with 'id'=edit):
-  
+
 app/controllers/flights_controller.rb:16:in `show'
 Started GET "/flights/12" for ::1 at 2020-11-05 12:08:20 +1100
 Processing by FlightsController#show as HTML
@@ -3344,9 +3694,9 @@ Processing by FlightsController#show as HTML
 Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Flight with 'id'=12):
-  
+
 app/controllers/flights_controller.rb:16:in `show'
 Started GET "/flights/11" for ::1 at 2020-11-05 12:08:23 +1100
 Processing by FlightsController#show as HTML
@@ -3356,7 +3706,8 @@ Processing by FlightsController#show as HTML
 Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Flight with 'id'=11):
-  
+
 app/controllers/flights_controller.rb:16:in `show'
+>>>>>>> 7b865de5ee4e10e9f80573d20831aa34f80e9ff5

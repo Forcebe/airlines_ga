@@ -12,7 +12,7 @@ class Login extends Component {
       errors: ''
      };
   }
-  UNSAFE_componentWillMount() {
+  componentDidMount() {
     return this.props.loggedInStatus ? this.redirect() : null
   }
 
@@ -26,7 +26,7 @@ class Login extends Component {
   //this handles submiting the data to the server
   _handleSubmit = (event) => {
     event.preventDefault()
-    const {username, email, password} = this.state
+    const {email, password} = this.state
 
     let user = {
       email: email,
@@ -64,7 +64,7 @@ class Login extends Component {
   }
 
   render() {
-    const {name, email, password} = this.state
+    const {email, password} = this.state
 
     return (
       <div className="section">

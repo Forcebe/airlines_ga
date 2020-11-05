@@ -2,6 +2,8 @@ import React, { Component,Fragment } from 'react';
 import Clock from './Clock';
 import '../stylesheets/flight.css';
 
+const SERVER_URL = 'http://localhost3000/flights.json';
+
 class Flight extends Component {
     constructor(){
         super();
