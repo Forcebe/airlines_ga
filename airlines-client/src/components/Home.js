@@ -1,13 +1,7 @@
-import React from 'react';
-<<<<<<< HEAD
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 import FlightForm from './FlightForm'
 import FlightResults from './FlightResults'
-=======
-import axios from 'axios';
-import {Link} from 'react-router-dom';
->>>>>>> d338b261d5e0ed78408dfe325ad29cf3f26f65cd
 
 const Home = (props) => {
   const handleClick = () => {
