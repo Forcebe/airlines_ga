@@ -3,8 +3,6 @@ import axios from 'axios'
 import {Link} from 'react-router-dom'
 import FlightForm from './FlightForm'
 
-
-
 const Home = (props) => {
   const handleClick = () => {
     axios.delete('http://localhost:3000/logout', {withCredentials: true})
